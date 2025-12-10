@@ -7,46 +7,81 @@
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
   
   <title>Frontend Mentor | Newsletter sign-up form with success message</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+  <main>
+    <section class="card" aria-labelledby="card-title">
+      <picture class="card-media">
+        <source srcset="assets/images/illustration-sign-up-desktop.svg" media="(min-width: 1024px)">
+        <source srcset="assets/images/illustration-sign-up-tablet.svg" media="(min-width: 608px)">
+        <img src="assets/images/illustration-sign-up-mobile.svg" alt="Newsletter ilustration">
+      </picture>
+      <div class="card-body">
+        <h1 class="card-title" id="card-title">Stay updated!</h1>
+        <p class="card-text">Join 60,000+ product managers receiving monthly updates on:</p>
+        <ul class="card-list">
+          <li>
+            <span class="list-icon">
+              <img src="assets/images/icon-list.svg" alt="">
+            </span>
+            <span class="list-text">
+              Product discovery and building what matters
+            </span></li>
+          <li><span class="list-icon">
+              <img src="assets/images/icon-list.svg" alt="">
+            </span>
+            <span class="list-text">
+              Measuring to ensure updates are a success
+            </span>
+          </li>
+          <li>
+            <span class="list-icon">
+              <img src="assets/images/icon-list.svg" alt="">
+            </span>
+            <span class="list-text">
+              And much more!
+            </span>
+          </li>
+        </ul>
+        <form class="card-form" action="" novalidate>
+          <div class="card-form-field">
+            <div class="card-form-label-row">
+              <label class="card-form-email-text" for="form-email">Email address</label>
 
-  <!-- Sign-up form start -->
+              <span class="card-form-email-error" 
+                    id="email-error" 
+                    aria-live="polite"
+              ></span>
 
-  Stay updated!
+            </div>
+            
+            <input class="card-form-input" 
+                  name="email" 
+                  id="form-email" 
+                  type="email" 
+                  placeholder="email@company.com" 
+                  required 
+                  aria-describedby="email-error" 
+                  aria-invalid="false"
+            >
+          </div>
+          
+          <button class="card-form-button" type="submit">Subscribe to monthly newsletter</button> 
+        </form>
+      </div>
+    </section>
 
-  Join 60,000+ product managers receiving monthly updates on:
-
-  Product discovery and building what matters
-  Measuring to ensure updates are a success
-  And much more!
-
-  Email address
-  email@company.com
-
-  Subscribe to monthly newsletter
-
-  <!-- Sign-up form end -->
-
-  <!-- Success message start -->
-
-  Thanks for subscribing!
-
-  A confirmation email has been sent to ash@loremcompany.com. 
-  Please open it and click the button inside to confirm your subscription.
-
-  Dismiss message
-
-  <!-- Success message end -->
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
+    <section class="card card--success" aria-labelledby="success-title" aria-live="polite" hidden>
+      <img src="assets/images/icon-success.svg" class="card-success-icon">
+      <h2 id="success-title">Thanks for subscribing!</h2>
+      <p class="card-success-text"> 
+        A confirmation email has been sent to 
+        <strong class="card-success-email">ash@loremcompany.com</strong>. 
+        Please open it and click the button inside to confirm your subscription.
+      </p>
+      <button class="card-success-button" type="button">Dismiss message</button>
+    </section>
+  </main>
 </body>
 </html>
