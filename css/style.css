@@ -22,6 +22,7 @@
   --fw-regular: 400;
   --fw-bold: 700;
   --fs-body: 1rem; /* 16px*/
+  --fs-label: 0.75rem;
   --lh-normal: 1.6;
   --lh-tight: 1.1;
   /*Spacing(design scale)*/
@@ -58,6 +59,8 @@ body {
 }
 
 .card {
+  width: 100%;
+  min-height: 100vh;
   max-width: var(--container-max);
   background-color: var(--clr-bg-card);
 }
@@ -82,6 +85,29 @@ body {
   display: flex;
   gap: var(--spacing-200);
   padding-block-end: var(--spacing-100);
+}
+.card-form {
+  display: grid;
+  gap: var(--spacing-200);
+}
+.card-form-label-row {
+  display: flex;
+  justify-content: space-between;
+  font-size: var(--fs-label);
+  font-weight: var(--fw-bold);
+}
+.card-form-email-error {
+  color: var(--clr-primary);
+}
+.card-form-input, .card-form-button {
+  width: 100%;
+  padding: var(--spacing-200);
+  border-radius: var(--radius-control);
+  border: 1px solid var(--clr-text-main);
+}
+.card-form-button {
+  background-color: var(--clr-bg-page);
+  color: var(--clr-bg-card);
 }
 
 /*# sourceMappingURL=style.css.map */

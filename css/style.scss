@@ -28,6 +28,7 @@
     --fw-bold: 700;
 
     --fs-body: 1rem; /* 16px*/
+    --fs-label: 0.75rem;
 
     --lh-normal: 1.6;
     --lh-tight: 1.1;
@@ -69,6 +70,8 @@ body{
 }
 
 .card{
+    width: 100%;
+    min-height: 100vh;
     max-width: var(--container-max);
     background-color: var(--clr-bg-card);
 
@@ -100,6 +103,34 @@ body{
             display: flex;
             gap: var(--spacing-200);
             padding-block-end: var(--spacing-100);
+        }
+    }
+
+    &-form{
+        display: grid;
+        gap: var(--spacing-200);
+
+        &-label-row{
+            display: flex;
+            justify-content: space-between;
+            font-size: var(--fs-label);
+            font-weight: var(--fw-bold);
+        }
+
+        &-email-error{
+            color: var(--clr-primary);
+        }
+
+        &-input , &-button{
+            width: 100%;
+            padding: var(--spacing-200);
+            border-radius: var(--radius-control);
+            border: 1px solid var(--clr-text-main);
+        }
+
+        &-button{
+            background-color: var(--clr-bg-page);
+            color: var(--clr-bg-card);
         }
     }
 }
