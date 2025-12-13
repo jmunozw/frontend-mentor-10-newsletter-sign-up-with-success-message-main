@@ -56,11 +56,16 @@ body {
   line-height: var(--lh-normal);
   background-color: var(--clr-bg-page);
   color: var(--clr-text-main);
+  min-height: 100vh;
+}
+
+main {
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
 }
 
 .card {
-  width: 100%;
-  min-height: 100vh;
   max-width: var(--container-max);
   background-color: var(--clr-bg-card);
 }
@@ -95,6 +100,7 @@ body {
   justify-content: space-between;
   font-size: var(--fs-label);
   font-weight: var(--fw-bold);
+  padding-block-end: var(--spacing-100);
 }
 .card-form-email-error {
   color: var(--clr-primary);
@@ -108,6 +114,23 @@ body {
 .card-form-button {
   background-color: var(--clr-bg-page);
   color: var(--clr-bg-card);
+}
+
+@media (min-width: 768px) {
+  .card {
+    min-height: auto;
+    padding: var(--spacing-400);
+    border-radius: var(--radius-card);
+  }
+  .card-body {
+    margin: 0;
+  }
+}
+@media (min-width: 1024px) {
+  .card--signup {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
