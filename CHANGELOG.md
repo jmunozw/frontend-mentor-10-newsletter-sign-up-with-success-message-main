@@ -23,13 +23,29 @@ Reto de Frontend Mentor
 
 ---
 
-## [F3] – Maquetación & Layout (pendiente)
-- Añadir HTML completo del formulario y success view.
-- Estructura semántica.
-- Estilos mobile-first.
-- Diseño responsive (desktop).
-- Estados visuales hover/focus/active.
-- Preparar clases para estados de error.
+## [F3] – Maquetación & Layout (en progreso)
+### ✅ Completado hasta ahora
+- HTML completo de la vista de formulario y vista de éxito (success) con `hidden`.
+- Estructura semántica + accesibilidad básica (`aria-live`, `aria-describedby`, `aria-invalid`).
+- Implementación de tokens CSS (colores, tipografía, spacing y radius).
+- Estilos mobile-first iniciales para:
+  - Tipografía base
+  - Lista con iconos
+  - Formulario (label, input, botón)
+- Ajuste del layout en tablet:
+  - Centrado vertical y horizontal de la tarjeta usando `min-height` + grid.
+  - La tarjeta deja de ser full-screen en tablet (altura por contenido).
+  - Bordes redondeados aplicados a la tarjeta en tablet.
+- Preparación del layout desktop:
+  - Separación de responsabilidades con modificadores (`card--signup` / `card--success`).
+  - Inicio de grid en desktop para `card--signup` (estructura a 2 columnas).
+
+### 🔜 Pendiente dentro de F3
+- Ajuste fino de espaciados internos del contenido (consistencia vertical).
+- Integración visual completa de la imagen con el radio en tablet/desktop.
+- Layout desktop final (proporciones, alineación, altura de imagen, etc.).
+- Estados hover/focus/active en inputs y botones.
+- Clases y estilos visuales para estado de error.
 
 ---
 
