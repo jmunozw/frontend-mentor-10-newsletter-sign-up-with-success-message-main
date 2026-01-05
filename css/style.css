@@ -56,7 +56,6 @@ body {
   line-height: var(--lh-normal);
   background-color: var(--clr-bg-page);
   color: var(--clr-text-main);
-  min-height: 100vh;
 }
 
 main {
@@ -127,9 +126,28 @@ main {
   }
 }
 @media (min-width: 1024px) {
+  .col-a {
+    grid-area: a;
+  }
+  .col-b {
+    grid-area: b;
+  }
   .card--signup {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    grid-template-areas: "b a";
+    gap: var(--spacing-800);
+    align-items: center;
+  }
+  .card-body {
+    margin: 0;
+    display: grid;
+    gap: var(--spacing-300);
+  }
+  .card-media img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
   }
 }
 
